@@ -6,12 +6,14 @@ editor: visual
 editor_options: 
   chunk_output_type: console
 ---
+
 ```{r}
 # install.packages('sf') #vector data
 # install.packages("stars") # raster data
 # install.packages("tmap") # map making
 # install.packages("here") # file paths
 ```
+
 ```{r}
 library(sf)
 library(stars)
@@ -48,7 +50,6 @@ tm_shape(world_vector)+
   # tm_polgyons colors in light gray with dark gray borders
 
 ```
-
 
 ```{r}
 tm_shape(world_vector) +
@@ -111,7 +112,6 @@ tm_shape(world_vector) +
   tm_fill() 
 ```
 
-
 ```{r}
 tm_shape(world_vector) +
   tm_fill()+
@@ -147,4 +147,3 @@ map1 <- tm_shape(world_vector) +
 
 tmap_save(map1, here('tmap-example.png'))
 ```
-
